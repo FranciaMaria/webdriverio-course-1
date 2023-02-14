@@ -23,7 +23,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/**/*.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -32,11 +32,9 @@ exports.config = {
     // Define suites
     suites: {
         smoke: [
-            './test/specs/**/home.js',
-            './test/specs/**/contact.js'
+            // ...
         ],
         component: [
-            './test/specs/**/nav.js',
             // ...
         ]
     },
@@ -56,7 +54,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -75,11 +73,11 @@ exports.config = {
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    },
-    {
-        maxInstances: 2,
-        browserName: 'firefox'
-    }
+        },
+        // {
+        //     maxInstances: 2,
+        //     browserName: 'firefox'
+        // }
     ],
     //
     // ===================
@@ -112,10 +110,12 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://practice.automationbro.com',
+    // baseUrl: 'https://practice.automationbro.com',
+    baseUrl: 'https://qa-interview.united.cloud/',
+    //
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 20000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
